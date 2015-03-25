@@ -4,8 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    tcpstream.cpp
+    tcpstream.cpp \
+    tcpconnector.cpp
 
 HEADERS += \
-    tcpstream.h
+    tcpstream.h \
+    tcpconnector.h
 
