@@ -1,6 +1,7 @@
 #include <arpa/inet.h>
 #include "tcpstream.h"
-
+#include <iostream>
+using namespace std;
 /**
  * @brief TCPStream::TCPStream The constructor stores the connected socket descriptor then converts the socket
  * information structure fields to a peer IP address string and peer TCP port.
@@ -29,6 +30,7 @@ TCPStream::~TCPStream()
  * @return
  */
 ssize_t  TCPStream::send(char* buffer, size_t len){
+    cout << buffer << endl;
     return write(m_sd, buffer, len);
 }
 

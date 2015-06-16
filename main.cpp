@@ -14,7 +14,7 @@ int main(int argc, char** argv)
     string message;
     int port = 1234;
     char line[256];
-    string address = "localhost";
+    string address = "192.168.1.10";
     TCPConnector* connector = new TCPConnector();
 
     TCPStream* stream = connector->connect(address.c_str() , port);
@@ -28,9 +28,9 @@ int main(int argc, char** argv)
         printf("received - %s\n", line);
         delete stream;
     }
-    /*
-    stream = connector->connect(localhost.c_str() , 80);
 
+    //stream = connector->connect(localhost.c_str() , 80);
+    /*
     if (stream) {
         message = "Yoyoyo marcello?";
         stream->send(const_cast<char*>(message.c_str()), message.size());
