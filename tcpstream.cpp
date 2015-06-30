@@ -1,4 +1,13 @@
-#include <arpa/inet.h>
+#if defined (WIN32)
+    #include <winsock2.h>
+    typedef int socklen_t;
+#elif defined __linux__
+    #include <sys/types.h>
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <arpa/inet.h>
+    #include <unistd.h>
+#endif
 #include "tcpstream.h"
 #include <iostream>
 using namespace std;
