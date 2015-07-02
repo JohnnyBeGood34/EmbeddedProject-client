@@ -1,4 +1,4 @@
-#include "configfilereader.h"
+#include "configfilemanager.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -13,6 +13,7 @@ ConfigFileReader::ConfigFileReader(char * pathToConfigFile):_path(pathToConfigFi
 void ConfigFileReader::readFile(char * pathToConfigFile){
     fstream configFile;
     configFile.open(pathToConfigFile);
+
     string line;
 
     if(configFile.is_open()==false){

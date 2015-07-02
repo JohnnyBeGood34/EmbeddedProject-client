@@ -9,10 +9,14 @@ using namespace std;
 class DoorManSystem
 {
 public:
-    DoorManSystem();
+    DoorManSystem(string serverAddress,int serverPort);
     bool getAGoodSequence(string& userSequence,map<string,string>& codesByPerson);
-    void sendMessage(TCPStream* stream,string message);
+    string sendMessage(string message);
     string messageReceived(TCPStream* stream);
+    void sendPhoto(char * imageBuffer,int size);
+private :
+    string _serverAddress;
+    int _serverPort;
 };
 
 #endif // DOORMANSYSTEM_H

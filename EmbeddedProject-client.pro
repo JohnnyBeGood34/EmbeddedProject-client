@@ -11,14 +11,14 @@ SOURCES += main.cpp \
     tcpconnector.cpp \
     pfio.c \
     pifacereader.cpp \
-    configfilereader.cpp \
-    doormansystem.cpp
+    doormansystem.cpp \
+    configfilemanager.cpp
 
 HEADERS += \
     tcpstream.h \
     tcpconnector.h \
     pfio.h \
     pifacereader.h \
-    configfilereader.h \
-    doormansystem.h
+    doormansystem.h \
+    configfilemanager.h
 
